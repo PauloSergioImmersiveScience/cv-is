@@ -12,13 +12,19 @@
         <h1>Computer Vision ImmerviveSpace</h1>
         <div class="subtitle">CV-IS · Intelligent and Immersive Computer Vision Platform</div>
 
-        <p class="description">
-            CV-IS is an online platform offering intelligent, real-time computer vision tools designed for
-            medical, environmental, educational, industrial, commercial, augmented reality, virtual reality,
-            mixed reality, sports, entertainment, and other professional fields.
-            <br><br>
-            The platform integrates modern vision techniques, interactive applications, and scalable modules to
-            support research, training, analysis, automation, and immersive human–computer interaction.
+        <p class="description" id="short-desc">
+            CV-IS is an online platform offering intelligent, real-time computer vision tools
+            for multiple fields including healthcare, sports, education, and immersive technologies.
+        </p>
+
+        <a id="more-link" class="more-link">Know more...</a>
+
+        <p class="description hidden" id="full-desc">
+            CV-IS integrates advanced visual algorithms, interactive applications, and scalable
+            modules to support research, training, environmental analysis, automation, surgical
+            action interpretation, industrial monitoring, motion analysis, augmented reality,
+            virtual reality, mixed reality, and a wide range of professional domains requiring
+            intelligent scene understanding.
         </p>
 
         <!-- ============================== -->
@@ -77,5 +83,17 @@
         </section>
 
     </div>
+    <script>
+        document.getElementById("more-link").addEventListener("click", function () {
+            document.getElementById("full-desc").classList.toggle("hidden");
+
+            if (document.getElementById("full-desc").classList.contains("hidden")) {
+                this.textContent = "Know more...";
+            } else {
+                this.textContent = "Show less";
+            }
+        });
+    </script>
+
 </body>
 </html>

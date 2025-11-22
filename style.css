@@ -122,3 +122,20 @@ p.description {
     pointer-events: none;
     opacity: 0.5;
 }
+
+.more-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: #64b5f6;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.more-link:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}
+
