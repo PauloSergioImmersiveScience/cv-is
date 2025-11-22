@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Computer Vision ImmerviveSpace (CV-IS)</title>
+    <title>Computer Vision Immersive Space</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Advanced online platform for computer vision applications, offering real-time perception, intelligent scene analysis, and interactive tools designed for healthcare, environment, education, industry, commerce, AR/VR/MR, sports, entertainment, and more.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Banner principal no topo (contém título e subtítulo dentro da própria imagem) -->
+    <!-- Banner principal no topo -->
     <div class="hero-top">
-        <img src="cv-is-banner.png" alt="Computer Vision ImmerviveSpace banner">
+        <img src="cv-is-banner.png" alt="Computer Vision Immersive Space Banner">
     </div>
 
     <div class="container">
-        <!-- Descrição curta + Know more -->
+
+        <!-- Descrição reduzida -->
         <p class="description" id="short-desc">
             CV-IS is an online platform offering intelligent, real-time computer vision tools
             for multiple fields including healthcare, sports, education, and immersive technologies.
@@ -31,46 +31,39 @@
             intelligent scene understanding.
         </p>
 
-        <!-- BLOCO 1 – Available Modules -->
+        <!-- Available Modules -->
         <section class="block">
             <h2 class="block-title">Available Modules</h2>
             <div class="modules">
-                <a class="module-card"
-                   href="https://paulosergioimmersivescience.github.io/Personal-AI/"
-                   target="_blank" rel="noopener noreferrer">
-                    <img src="pta-v01.svg" alt="Personal Trainer Agent V-01 logo">
+                <a class="module-card" href="https://paulosergioimmersivescience.github.io/Personal-AI/" target="_blank">
+                    <img src="pta-v01.svg" alt="Personal Trainer Agent V-01">
                     <div class="module-name">Personal Trainer Agent V-01</div>
                     <div class="module-tagline">AI-assisted motion and exercise capture</div>
                 </a>
             </div>
         </section>
 
-        <!-- BLOCO 2 – Coming Soon -->
+        <!-- Coming Soon -->
         <section class="block">
             <h2 class="block-title">Coming Soon</h2>
             <ul class="link-list">
-                <li><a href="#" class="disabled-link">Surgical Action Analyzer</a></li>
-                <li><a href="#" class="disabled-link">Industrial Safety Monitor</a></li>
-                <li><a href="#" class="disabled-link">Environmental Scene Classifier</a></li>
-                <li><a href="#" class="disabled-link">Educational Interactive Vision Suite</a></li>
-                <li><a href="#" class="disabled-link">Sports Motion Analyzer</a></li>
-                <li><a href="#" class="disabled-link">Immersive AR/VR Vision Toolkit</a></li>
+                <li><a class="disabled-link">Surgical Action Analyzer</a></li>
+                <li><a class="disabled-link">Industrial Safety Monitor</a></li>
+                <li><a class="disabled-link">Environmental Scene Classifier</a></li>
+                <li><a class="disabled-link">Educational Interactive Vision Suite</a></li>
+                <li><a class="disabled-link">Sports Motion Analyzer</a></li>
+                <li><a class="disabled-link">Immersive AR/VR Vision Toolkit</a></li>
             </ul>
         </section>
     </div>
 
     <script>
-        // Expande / contrai descrição
         document.getElementById("more-link").addEventListener("click", function () {
             const full = document.getElementById("full-desc");
             full.classList.toggle("hidden");
-
-            if (full.classList.contains("hidden")) {
-                this.textContent = "Know more...";
-            } else {
-                this.textContent = "Show less";
-            }
+            this.textContent = full.classList.contains("hidden") ? "Know more..." : "Show less";
         });
     </script>
+
 </body>
 </html>

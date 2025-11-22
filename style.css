@@ -2,165 +2,102 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
     background: #0b0c10;
     color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Banner no topo – largura total, pouca altura */
-.hero-top {
-    width: 100%;
-    background: #020612;
-}
-
+/* Banner no topo – imagem agora não é cortada */
 .hero-top img {
     width: 100%;
-    max-height: 220px;      /* controla a altura: deixa a imagem mais “horizontal” */
-    object-fit: cover;      /* preenche na largura, recorta um pouco na vertical se precisar */
+    height: auto;
+    max-height: 280px;    /* mantém a imagem horizontal */
+    object-fit: cover;
     display: block;
 }
 
-/* Conteúdo central */
+/* Conteúdo */
 .container {
     max-width: 900px;
-    padding: 20px 24px 32px;
+    padding: 22px 24px;
     margin: 0 auto;
 }
 
-/* Texto descritivo */
+/* Descrição */
 .description {
-    font-size: 1rem;
+    font-size: 1rem;          /* tamanho normal */
     line-height: 1.55;
-    margin-bottom: 1.0rem;
+    margin-bottom: 1rem;
     color: #cfd8dc;
 }
 
-#short-desc {
-    margin-bottom: 0.4rem;
-}
-
-/* Link “Know more...” */
 .more-link {
-    display: inline-block;
-    margin-top: 0;
-    margin-bottom: 0.8rem;
     color: #64b5f6;
     cursor: pointer;
     font-size: 0.95rem;
-}
-
-.more-link:hover {
-    text-decoration: underline;
 }
 
 .hidden {
     display: none;
 }
 
-/* Blocos principais */
+/* Blocos */
 .block {
-    margin-top: 1.2rem;
-    margin-bottom: 1.2rem;
-    padding: 14px 18px 20px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(144,164,174,0.4);
     border-radius: 16px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(144, 164, 174, 0.4);
+    padding: 18px 20px;
+    margin-bottom: 20px;
 }
 
 .block-title {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    font-size: 1.05rem;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
     color: #b0bec5;
+    letter-spacing: 0.12em;
+    margin-bottom: 16px;
 }
 
-/* Card do módulo disponível */
-.modules {
-    display: flex;
-    justify-content: center;
-}
-
+/* Module card */
+.modules { display: flex; justify-content: center; }
 .module-card {
+    text-decoration: none;
+    border-radius: 16px;
+    padding: 12px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid #64b5f6;
+    transition: 0.2s;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    text-decoration: none;
-    border-radius: 16px;
-    padding: 10px 14px 14px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid #64b5f6;
-    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
-
+.module-card:hover {
+    background: rgba(100,181,246,0.1);
+    transform: translateY(-2px);
+}
 .module-card img {
-    width: 190px;
-    height: 190px;
-    display: block;
+    width: 170px;
+    height: 170px;
     margin-bottom: 8px;
 }
 
-.module-name {
-    font-size: 0.98rem;
-    color: #e3f2fd;
-    font-weight: 600;
-}
-
-.module-tagline {
-    font-size: 0.8rem;
-    color: #b0bec5;
-    margin-top: 2px;
-}
-
-.module-card:hover {
-    background: rgba(100, 181, 246, 0.08);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-    transform: translateY(-2px);
-}
-
-/* Lista Coming Soon */
-.link-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.link-list li {
-    margin: 0.4rem 0;
-}
-
-.link-list a {
-    text-decoration: none;
-    padding: 6px 10px;
-    border-radius: 999px;
-    border: 1px solid #455a64;
-    color: #cfd8dc;
-    font-size: 0.9rem;
-    display: inline-block;
-}
-
+/* Coming Soon */
 .disabled-link {
+    opacity: 0.45;
     pointer-events: none;
-    opacity: 0.5;
 }
 
-/* Responsivo */
+/* RESPONSIVO — restaura tamanho normal no celular */
 @media (max-width: 768px) {
-    .container {
-        padding: 16px;
+    .description {
+        font-size: 1rem;   /* voltou ao tamanho original */
     }
 
     .module-card img {
-        width: 160px;
-        height: 160px;
+        width: 150px;
+        height: 150px;
     }
 
     .hero-top img {
-        max-height: 190px;  /* um pouco menor em telas pequenas */
+        max-height: 220px; /* imagem ainda mais horizontal no mobile */
     }
 }
