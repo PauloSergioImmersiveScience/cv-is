@@ -8,92 +8,77 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Computer Vision ImmerviveSpace</h1>
-        <div class="subtitle">CV-IS · Intelligent and Immersive Computer Vision Platform</div>
+    <div class="page-wrapper">
+        <!-- LADO ESQUERDO: texto + módulos -->
+        <div class="content">
+            <div class="container">
+                <h1>Computer Vision ImmerviveSpace</h1>
+                <div class="subtitle">CV-IS · Intelligent and Immersive Computer Vision Platform</div>
 
-        <p class="description" id="short-desc">
-            CV-IS is an online platform offering intelligent, real-time computer vision tools
-            for multiple fields including healthcare, sports, education, and immersive technologies.
-        </p>
+                <!-- Texto curto + Know more -->
+                <p class="description" id="short-desc">
+                    CV-IS is an online platform offering intelligent, real-time computer vision tools
+                    for multiple fields including healthcare, sports, education, and immersive technologies.
+                </p>
 
-        <a id="more-link" class="more-link">Know more...</a>
+                <a id="more-link" class="more-link">Know more...</a>
 
-        <p class="description hidden" id="full-desc">
-            CV-IS integrates advanced visual algorithms, interactive applications, and scalable
-            modules to support research, training, environmental analysis, automation, surgical
-            action interpretation, industrial monitoring, motion analysis, augmented reality,
-            virtual reality, mixed reality, and a wide range of professional domains requiring
-            intelligent scene understanding.
-        </p>
+                <p class="description hidden" id="full-desc">
+                    CV-IS integrates advanced visual algorithms, interactive applications, and scalable
+                    modules to support research, training, environmental analysis, automation, surgical
+                    action interpretation, industrial monitoring, motion analysis, augmented reality,
+                    virtual reality, mixed reality, and a wide range of professional domains requiring
+                    intelligent scene understanding.
+                </p>
 
-        <!-- ============================== -->
-        <!-- BLOCO 1 – Available Modules   -->
-        <!-- ============================== -->
-        <section class="block">
-            <h2 class="block-title">Available Modules</h2>
-            <div class="modules">
-                <a class="module-card"
-                   href="https://paulosergioimmersivescience.github.io/Personal-AI/"
-                   target="_blank" rel="noopener noreferrer">
-                    <img src="pta-v01.svg" alt="Personal Trainer Agent V-01 logo">
-                    <div class="module-name">Personal Trainer Agent V-01</div>
-                    <div class="module-tagline">AI-assisted motion and exercise capture</div>
-                </a>
+                <!-- BLOCO 1 – Available Modules -->
+                <section class="block">
+                    <h2 class="block-title">Available Modules</h2>
+                    <div class="modules">
+                        <a class="module-card"
+                        href="https://paulosergioimmersivescience.github.io/Personal-AI/"
+                        target="_blank" rel="noopener noreferrer">
+                            <img src="pta-v01.svg" alt="Personal Trainer Agent V-01 logo">
+                            <div class="module-name">Personal Trainer Agent V-01</div>
+                            <div class="module-tagline">AI-assisted motion and exercise capture</div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- BLOCO 2 – Coming Soon -->
+                <section class="block">
+                    <h2 class="block-title">Coming Soon</h2>
+                    <ul class="link-list">
+                        <li><a href="#" class="disabled-link">Surgical Action Analyzer</a></li>
+                        <li><a href="#" class="disabled-link">Industrial Safety Monitor</a></li>
+                        <li><a href="#" class="disabled-link">Environmental Scene Classifier</a></li>
+                        <li><a href="#" class="disabled-link">Educational Interactive Vision Suite</a></li>
+                        <li><a href="#" class="disabled-link">Sports Motion Analyzer</a></li>
+                        <li><a href="#" class="disabled-link">Immersive AR/VR Vision Toolkit</a></li>
+                    </ul>
+                </section>
             </div>
-        </section>
+        </div>
 
-        <!-- ============================== -->
-        <!-- BLOCO 2 – Coming Soon         -->
-        <!-- ============================== -->
-        <section class="block">
-            <h2 class="block-title">Coming Soon</h2>
-            <ul class="link-list">
-                <li>
-                    <a href="#" class="disabled-link">
-                        Surgical Action Analyzer
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="disabled-link">
-                        Industrial Safety Monitor
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="disabled-link">
-                        Environmental Scene Classifier
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="disabled-link">
-                        Educational Interactive Vision Suite
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="disabled-link">
-                        Sports Motion Analyzer
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="disabled-link">
-                        Immersive AR/VR Vision Toolkit
-                    </a>
-                </li>
-            </ul>
-        </section>
-
+        <!-- LADO DIREITO: imagem de destaque ocupando a lateral -->
+        <div class="hero">
+            <img src="computer-vision-immervivespace.png"
+                 alt="Computer Vision ImmerviveSpace hero image">
+        </div>
     </div>
-    <script>
-        document.getElementById("more-link").addEventListener("click", function () {
-            document.getElementById("full-desc").classList.toggle("hidden");
 
-            if (document.getElementById("full-desc").classList.contains("hidden")) {
+    <script>
+        // Expande / contrai descrição
+        document.getElementById("more-link").addEventListener("click", function () {
+            const full = document.getElementById("full-desc");
+            full.classList.toggle("hidden");
+
+            if (full.classList.contains("hidden")) {
                 this.textContent = "Know more...";
             } else {
                 this.textContent = "Show less";
             }
         });
     </script>
-
 </body>
 </html>

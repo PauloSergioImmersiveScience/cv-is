@@ -1,22 +1,52 @@
-body {
+/* Layout geral */
+html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
+}
+
+body {
     font-family: Arial, Helvetica, sans-serif;
     background: #0b0c10;
     color: #f2f2f2;
+}
+
+/* Wrapper em duas colunas: esquerda (conteúdo), direita (imagem) */
+.page-wrapper {
     display: flex;
     min-height: 100vh;
-    align-items: center;
+}
+
+/* Coluna de conteúdo */
+.content {
+    flex: 1 1 55%;
+    display: flex;
     justify-content: center;
+    align-items: flex-start;
 }
 
 .container {
     max-width: 900px;
     padding: 24px;
-    text-align: center;
-    margin: 0 auto;
+    margin: 24px;
 }
 
+/* Coluna da imagem de marketing */
+.hero {
+    flex: 1 1 45%;
+    position: relative;
+    overflow: hidden;
+    background: #020612;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* ocupa toda a lateral mantendo proporção */
+    display: block;
+}
+
+/* Títulos e textos */
 h1 {
     margin-bottom: 0.3rem;
     font-size: 2.3rem;
@@ -26,19 +56,42 @@ h1 {
 .subtitle {
     font-size: 0.9rem;
     color: #9fa8da;
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.4rem;
 }
 
-p.description {
+.description {
     font-size: 1rem;
     line-height: 1.55;
-    margin-bottom: 2.4rem;
+    margin-bottom: 1.2rem;
     color: #cfd8dc;
 }
 
+#short-desc {
+    margin-bottom: 0.4rem;
+}
+
+/* Link “Know more...” */
+.more-link {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    color: #64b5f6;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.more-link:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Blocos principais */
 .block {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
     padding: 14px 18px 20px;
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.02);
@@ -48,13 +101,13 @@ p.description {
 .block-title {
     margin-top: 0;
     margin-bottom: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     color: #b0bec5;
 }
 
-/* módulo com imagem */
+/* Módulo com imagem */
 .modules {
     display: flex;
     justify-content: center;
@@ -97,7 +150,7 @@ p.description {
     transform: translateY(-2px);
 }
 
-/* lista de Coming Soon */
+/* Lista de Coming Soon */
 .link-list {
     list-style: none;
     padding: 0;
@@ -123,19 +176,23 @@ p.description {
     opacity: 0.5;
 }
 
-.more-link {
-    display: inline-block;
-    margin-top: 2px;
-    color: #64b5f6;
-    cursor: pointer;
-    font-size: 0.95rem;
-}
+/* Responsivo: em telas pequenas, empilha (imagem vai pra baixo) */
+@media (max-width: 900px) {
+    .page-wrapper {
+        flex-direction: column;
+    }
 
-.more-link:hover {
-    text-decoration: underline;
-}
+    .content {
+        flex: none;
+    }
 
-.hidden {
-    display: none;
-}
+    .container {
+        margin: 16px;
+        padding: 16px;
+    }
 
+    .hero {
+        flex: none;
+        height: 260px;
+    }
+}
