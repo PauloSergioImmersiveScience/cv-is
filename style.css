@@ -31,9 +31,12 @@ body {
 /* Imagem do banner – SEM corte, sempre inteira */
 .hero-top img {
     width: 100%;
-    height: auto;       /* mantém proporção */
+    height: auto;
+    max-height: 200px;   /* <<< Banner mais baixo */
     display: block;
+    object-fit: cover;   /* garante que não sobre espaço nas laterais */
 }
+
 
 
 /* ============================
