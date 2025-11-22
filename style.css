@@ -1,4 +1,4 @@
-/* Layout geral */
+/* Base */
 html, body {
     margin: 0;
     padding: 0;
@@ -11,58 +11,31 @@ body {
     color: #f2f2f2;
 }
 
-/* Wrapper em duas colunas: esquerda (conteúdo), direita (imagem) */
-.page-wrapper {
-    display: flex;
-    min-height: 100vh;
-}
-
-/* Coluna de conteúdo */
-.content {
-    flex: 1 1 55%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.container {
-    max-width: 900px;
-    padding: 24px;
-    margin: 24px;
-}
-
-/* Coluna da imagem de marketing */
-.hero {
-    flex: 1 1 45%;
-    position: relative;
-    overflow: hidden;
+/* Banner no topo – largura total, pouca altura */
+.hero-top {
+    width: 100%;
     background: #020612;
 }
 
-.hero img {
+.hero-top img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;       /* ocupa toda a lateral mantendo proporção */
+    max-height: 220px;      /* controla a altura: deixa a imagem mais “horizontal” */
+    object-fit: cover;      /* preenche na largura, recorta um pouco na vertical se precisar */
     display: block;
 }
 
-/* Títulos e textos */
-h1 {
-    margin-bottom: 0.3rem;
-    font-size: 2.3rem;
-    letter-spacing: 0.04em;
+/* Conteúdo central */
+.container {
+    max-width: 900px;
+    padding: 20px 24px 32px;
+    margin: 0 auto;
 }
 
-.subtitle {
-    font-size: 0.9rem;
-    color: #9fa8da;
-    margin-bottom: 1.4rem;
-}
-
+/* Texto descritivo */
 .description {
     font-size: 1rem;
     line-height: 1.55;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.0rem;
     color: #cfd8dc;
 }
 
@@ -107,7 +80,7 @@ h1 {
     color: #b0bec5;
 }
 
-/* Módulo com imagem */
+/* Card do módulo disponível */
 .modules {
     display: flex;
     justify-content: center;
@@ -150,7 +123,7 @@ h1 {
     transform: translateY(-2px);
 }
 
-/* Lista de Coming Soon */
+/* Lista Coming Soon */
 .link-list {
     list-style: none;
     padding: 0;
@@ -176,23 +149,18 @@ h1 {
     opacity: 0.5;
 }
 
-/* Responsivo: em telas pequenas, empilha (imagem vai pra baixo) */
-@media (max-width: 900px) {
-    .page-wrapper {
-        flex-direction: column;
-    }
-
-    .content {
-        flex: none;
-    }
-
+/* Responsivo */
+@media (max-width: 768px) {
     .container {
-        margin: 16px;
         padding: 16px;
     }
 
-    .hero {
-        flex: none;
-        height: 260px;
+    .module-card img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .hero-top img {
+        max-height: 190px;  /* um pouco menor em telas pequenas */
     }
 }
