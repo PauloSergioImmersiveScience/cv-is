@@ -32,7 +32,6 @@ body {
 .hero-top img {
     width: 100%;
     height: auto;
-    max-height: 200px;   /* <<< Banner mais baixo */
     display: block;
     object-fit: cover;   /* garante que não sobre espaço nas laterais */
 }
