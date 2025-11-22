@@ -1,0 +1,35 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="260" viewBox="0 0 260 260">
+  <!-- fundo -->
+  <rect x="5" y="5" width="250" height="250" rx="20" fill="#ffffff" stroke="#222831" stroke-width="4"></rect>
+
+  <!-- círculo de fundo do corpo -->
+  <circle cx="130" cy="110" r="70" fill="#ffe0b2"></circle>
+
+  <!-- “corpo” estilizado -->
+  <!-- cabeça -->
+  <circle cx="130" cy="70" r="16" fill="#ec407a"></circle>
+
+  <!-- tronco -->
+  <path d="M130 86 L118 130 Q130 145 142 130 Z" fill="#ec407a"></path>
+
+  <!-- braço esquerdo -->
+  <path d="M118 95 L88 120 Q92 130 102 124 Z" fill="#26c6da"></path>
+
+  <!-- braço direito -->
+  <path d="M142 95 L172 120 Q168 130 158 124 Z" fill="#26c6da"></path>
+
+  <!-- perna esquerda -->
+  <path d="M120 130 L110 175 Q120 185 130 170 Z" fill="#ffb300"></path>
+
+  <!-- perna direita -->
+  <path d="M140 130 L150 175 Q140 188 130 170 Z" fill="#ffb300"></path>
+
+  <!-- texto embaixo -->
+  <text x="130" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#263238" font-weight="bold">
+    Personal Trainer
+  </text>
+  <text x="130" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#546e7a">
+    Agent V-01
+  </text>
+</svg>

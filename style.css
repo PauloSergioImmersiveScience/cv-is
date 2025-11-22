@@ -1,0 +1,43 @@
+.container {
+    max-width: 900px;
+    padding: 24px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.modules {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.module-card {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 16px;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid #64b5f6;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.module-card img {
+    width: 180px;
+    height: 180px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.module-name {
+    font-size: 0.95rem;
+    color: #e3f2fd;
+    font-weight: 600;
+}
+
+.module-card:hover {
+    background: rgba(100, 181, 246, 0.08);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    transform: translateY(-2px);
+}
