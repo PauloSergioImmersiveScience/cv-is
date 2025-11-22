@@ -1,103 +1,197 @@
-/* Base */
+/* ============================
+   BASE GERAL
+   ============================ */
+
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     margin: 0;
     padding: 0;
-    background: #0b0c10;
-    color: #f2f2f2;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Banner no topo – imagem agora não é cortada */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0c10;
+    color: #f2f2f2;
+}
+
+
+/* ============================
+   BANNER NO TOPO
+   ============================ */
+
+/* Contêiner do banner */
+.hero-top {
+    width: 100%;
+    background: #020612;
+}
+
+/* Imagem do banner – SEM corte, sempre inteira */
 .hero-top img {
     width: 100%;
-    height: auto;
-    max-height: 280px;    /* mantém a imagem horizontal */
-    object-fit: cover;
+    height: auto;       /* mantém proporção */
     display: block;
 }
 
-/* Conteúdo */
+
+/* ============================
+   CONTEÚDO CENTRAL
+   ============================ */
+
 .container {
     max-width: 900px;
-    padding: 22px 24px;
     margin: 0 auto;
+    padding: 22px 24px 32px;
 }
 
-/* Descrição */
+/* Texto descritivo */
 .description {
-    font-size: 1rem;          /* tamanho normal */
+    font-size: 1rem;
     line-height: 1.55;
     margin-bottom: 1rem;
     color: #cfd8dc;
 }
 
+/* Parágrafo curto antes do "Know more" */
+#short-desc {
+    margin-bottom: 0.4rem;
+}
+
+/* Link "Know more..." / "Show less" */
 .more-link {
+    display: inline-block;
+    margin-bottom: 0.8rem;
     color: #64b5f6;
     cursor: pointer;
     font-size: 0.95rem;
+}
+
+.more-link:hover {
+    text-decoration: underline;
 }
 
 .hidden {
     display: none;
 }
 
-/* Blocos */
+
+/* ============================
+   BLOCOS (Available / Coming Soon)
+   ============================ */
+
 .block {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(144,164,174,0.4);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(144, 164, 174, 0.4);
     border-radius: 16px;
     padding: 18px 20px;
     margin-bottom: 20px;
 }
 
 .block-title {
+    margin: 0 0 16px 0;
+    font-size: 1.05rem;
     text-transform: uppercase;
-    color: #b0bec5;
     letter-spacing: 0.12em;
-    margin-bottom: 16px;
+    color: #b0bec5;
 }
 
-/* Module card */
-.modules { display: flex; justify-content: center; }
+
+/* ============================
+   MÓDULO DISPONÍVEL
+   ============================ */
+
+.modules {
+    display: flex;
+    justify-content: center;
+}
+
 .module-card {
-    text-decoration: none;
-    border-radius: 16px;
-    padding: 12px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid #64b5f6;
-    transition: 0.2s;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
+    text-decoration: none;
+    border-radius: 16px;
+    padding: 12px 14px 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid #64b5f6;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
-.module-card:hover {
-    background: rgba(100,181,246,0.1);
-    transform: translateY(-2px);
-}
+
 .module-card img {
-    width: 170px;
-    height: 170px;
+    width: 180px;
+    height: 180px;
+    display: block;
     margin-bottom: 8px;
 }
 
-/* Coming Soon */
-.disabled-link {
-    opacity: 0.45;
-    pointer-events: none;
+.module-name {
+    font-size: 0.98rem;
+    color: #e3f2fd;
+    font-weight: 600;
+    text-align: center;
 }
 
-/* RESPONSIVO — restaura tamanho normal no celular */
+.module-tagline {
+    font-size: 0.8rem;
+    color: #b0bec5;
+    margin-top: 2px;
+    text-align: center;
+}
+
+.module-card:hover {
+    background: rgba(100, 181, 246, 0.08);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    transform: translateY(-2px);
+}
+
+
+/* ============================
+   LISTA "COMING SOON"
+   ============================ */
+
+.link-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link-list li {
+    margin: 0.4rem 0;
+}
+
+.link-list a {
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid #455a64;
+    color: #cfd8dc;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.disabled-link {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+
+/* ============================
+   RESPONSIVO (CELULAR / TABLET)
+   ============================ */
+
 @media (max-width: 768px) {
+    .container {
+        padding: 18px 16px 28px;
+    }
+
     .description {
-        font-size: 1rem;   /* voltou ao tamanho original */
+        font-size: 1rem;   /* mantém legível no celular */
     }
 
     .module-card img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .hero-top img {
-        max-height: 220px; /* imagem ainda mais horizontal no mobile */
+        width: 160px;
+        height: 160px;
     }
 }
